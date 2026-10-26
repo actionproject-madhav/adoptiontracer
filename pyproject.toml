@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adoptiontracer"
+version = "0.2.0"
+description = "Measure research-to-practice integration lag from the Git history of practitioner artifacts"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Madhav Khanal", email = "madhavkhanal3145@gmail.com"}]
+keywords = ["research-impact", "integration-lag", "mining-software-repositories", "arxiv"]
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+analysis = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "statsmodels>=0.14",
+    "lifelines>=0.27",
+    "matplotlib>=3.7",
+]
+
+[project.scripts]
+adoptiontracer = "adoptiontracer.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["adoptiontracer*"]
+
+[tool.setuptools.package-data]
+adoptiontracer = ["artifacts.yaml"]
