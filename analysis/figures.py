@@ -67,8 +67,16 @@ def clean(ax, left=True):
         ax.tick_params(axis="y", length=0)
 
 
-def panel_label(ax, s, x=-0.02):
-    ax.text(x, 1.04, rf"\textbf{{({s})}}", transform=ax.transAxes, ha="right", va="bottom", fontsize=8)
+def panel_labels(fig, panels):
+    """Place bold (a), (b), ... flush with the left edge of each panel's outermost text."""
+    from matplotlib.backends.backend_agg import FigureCanvasAgg
+    renderer = FigureCanvasAgg(fig).get_renderer()
+    boxes = [ax.get_tightbbox(renderer) for ax, _ in panels]
+    inv = fig.transFigure.inverted()
+    top = max(inv.transform((0, b.y1))[1] for b in boxes) + 3 / 72 / fig.get_figheight()
+    for (ax, s), b in zip(panels, boxes):
+        xf = inv.transform((b.x0, 0))[0]
+        fig.text(xf, top, rf"\textbf{{({s})}}", ha="left", va="bottom", fontsize=8)
 
 
 def km_curve(ax, dur, event, color, label, scale=1.0):
@@ -121,11 +129,11 @@ def data():
 # ------------------------------------------------------------------ Figure 1
 def make_fig1():
     pool, pa, pc, _, _ = data()
-    fig = plt.figure(figsize=(TEXTWIDTH_IN - 0.18, 1.85))
+    fig = plt.figure(figsize=(TEXTWIDTH_IN - 0.05, 1.85))
     # explicit axes boxes in figure fractions: [left, bottom, width, height]
-    ax_a = fig.add_axes([0.07, 0.24, 0.21, 0.66])
-    ax_b = fig.add_axes([0.48, 0.24, 0.17, 0.66])
-    ax_c = fig.add_axes([0.785, 0.24, 0.205, 0.66])
+    ax_a = fig.add_axes([0.06, 0.24, 0.205, 0.66])
+    ax_b = fig.add_axes([0.455, 0.24, 0.2, 0.66])
+    ax_c = fig.add_axes([0.765, 0.24, 0.23, 0.66])
 
     ax = ax_a
     bins = np.arange(0, 103, 3)
@@ -135,8 +143,8 @@ def make_fig1():
     ax.set_ylabel("Papers")
     ax.set_xlim(0, 102)
     ax.set_xticks([0, 24, 48, 72, 96])
+    ax.set_yticks([0, 20, 40, 60, 80])
     clean(ax)
-    panel_label(ax, "a", x=-0.28)
 
     ax = ax_b
     order = ["Regulatory", "Tool", "Benchmark"]
@@ -152,7 +160,6 @@ def make_fig1():
     ax.set_xlim(-3, 102)
     ax.set_xticks([0, 24, 48, 72, 96])
     clean(ax, left=False)
-    panel_label(ax, "b", x=-0.86)
 
     ax = ax_c
     km_curve(ax, pool.lag.clip(lower=0.01), np.ones(len(pool)), FOREST, "Any file", 100)
@@ -165,7 +172,7 @@ def make_fig1():
     ax.set_ylabel(r"Integrated (\%)")
     ax.legend(loc="lower right", handlelength=1.4, borderaxespad=0.3)
     clean(ax)
-    panel_label(ax, "c", x=-0.3)
+    panel_labels(fig, [(ax_a, "a"), (ax_b, "b"), (ax_c, "c")])
     return fig
 
 
@@ -207,7 +214,7 @@ ROWS = [
 def make_fig3():
     _, _, _, _, co = data()
     fig = plt.figure(figsize=(TEXTWIDTH_IN + 0.07, 1.9))
-    ax1 = fig.add_axes([0.065, 0.22, 0.27, 0.70])
+    ax1 = fig.add_axes([0.055, 0.22, 0.265, 0.70])
     ax2 = fig.add_axes([0.645, 0.22, 0.18, 0.70])
 
     km_curve(ax1, co[co.official == 1].dur, co[co.official == 1].event, FOREST, "Official repository", 100)
@@ -220,7 +227,6 @@ def make_fig3():
     ax1.set_ylabel(r"Integrated (\%)")
     ax1.legend(loc="upper left", handlelength=1.4, borderaxespad=0.2)
     clean(ax1)
-    panel_label(ax1, "a", x=-0.2)
 
     n = len(ROWS)
     ys = np.arange(n)[::-1]
@@ -245,7 +251,7 @@ def make_fig3():
     ax2.set_ylim(-0.7, n - 0.3)
     ax2.set_xlabel(r"Estimate (95\% CI)")
     clean(ax2, left=False)
-    panel_label(ax2, "b", x=-1.45)
+    panel_labels(fig, [(ax1, "a"), (ax2, "b")])
     return fig
 
 
