@@ -26,7 +26,7 @@ RobustBench, AutoAttack, HarmBench (benchmarks); MITRE ATLAS (regulatory).
 |---|---|---|
 | `papers_71_coded.csv` | 71 | The cross-validated sample as submitted, with the final human-coded variables (definitions in `CODEBOOK.md`). `G1` contribution type, `G2` threat category (NIST AI 100-2), `G3` domain, `G4` venue type, `G5` code available, `G6` code timing, `T1` access level, `T2` gradient use, `Q1` real-world testing. `first_adoption_*` and `adoption_lag_months` are the submission's dates; the uniform re-extraction is in `first_events_69.csv`. |
 | `candidates_286.csv` | 286 | All arXiv identifiers extracted from the artifact snapshots before the adversarial-ML relevance screen (`is_aml_paper`). |
-| `coding/coder_A.csv`, `coder_B.csv`, `coder_C.csv` | 71 each | Raw annotation sheets of the three coders as recorded (casing, whitespace, and free-text venue names left untouched). `coder_A` is the reconciled master after consensus between the two primary coders; `coder_C` is the independent reliability rater. |
+| `coding/coder_A.csv`, `coder_B.csv`, `coder_C.csv` | 71 each | Raw annotation sheets of the three coders as recorded (casing, whitespace, and free-text venue names left untouched; arXiv identifiers restored to canonical form where a spreadsheet had dropped trailing zeros). `coder_A` is the reconciled master after consensus between the two primary coders; `coder_C` is the independent reliability rater. |
 
 ## Code-availability exposure
 
