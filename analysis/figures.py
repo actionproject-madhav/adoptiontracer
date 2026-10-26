@@ -141,7 +141,7 @@ def data():
 # ------------------------------------------------------------------ Figure 1
 def make_fig1():
     pool, pa, pc, _, _ = data()
-    fig = plt.figure(figsize=(TEXTWIDTH_IN, 1.85))
+    fig = plt.figure(figsize=(TEXTWIDTH_IN - 0.18, 1.85))
     # explicit axes boxes in figure fractions: [left, bottom, width, height]
     ax_a = fig.add_axes([0.07, 0.24, 0.21, 0.66])
     ax_b = fig.add_axes([0.48, 0.24, 0.17, 0.66])
@@ -173,11 +173,11 @@ def make_fig1():
     ax.set_xlim(-2, 102)
     ax.set_xticks([0, 24, 48, 72, 96])
     clean(ax, left=False)
-    panel_label(ax, "b", x=-0.62)
+    panel_label(ax, "b", x=-0.86)
 
     ax = ax_c
     km_curve(ax, pool.lag.clip(lower=0.01), np.ones(len(pool)), FOREST, "Any file")
-    km_curve(ax, pc.dur, pc.event, VERMILLION, "Source code")
+    km_curve(ax, pc.dur, pc.event, VERMILLION, "Code-level")
     ax.set_xlim(0, 72)
     ax.set_ylim(0, 1.0)
     ax.set_xticks([0, 12, 24, 36, 48, 60, 72])
@@ -194,7 +194,7 @@ def make_fig1():
 # ------------------------------------------------------------------ Figure 2
 def make_fig2():
     _, _, _, f69, _ = data()
-    fig = plt.figure(figsize=(TEXTWIDTH_IN, 1.75))
+    fig = plt.figure(figsize=(TEXTWIDTH_IN + 0.18, 1.75))
     ax = fig.add_axes([0.19, 0.22, 0.79, 0.76])
     dom_order = ["Malware", "Audio", "Cross-domain", "NLP", "LLM", "Vision"]
     vals = [f69[f69.Domain == d].lag.values for d in dom_order]
@@ -219,28 +219,29 @@ ROWS = [
     ("Cox HR, year-adjusted", 4.87, 3.55, 6.69, FOREST),
     ("Cox HR, year-strat.\\ + venue", 3.58, 2.57, 4.99, FOREST),
     ("Logistic OR, year-adjusted", 5.26, 3.78, 7.31, FOREST),
-    ("Matched sample, $n$=139", None, None, None, None),
-    ("Logistic OR", 2.34, 0.96, 5.68, INK),
-    ("Cox HR, as submitted", 1.79, 1.03, 3.10, INK),
-    ("Cox HR, re-drawn controls", 2.11, 1.17, 3.80, INK),
-    ("Cox HR, leakage-corrected", 1.49, 0.79, 2.83, INK),
+    ("Matched sample", None, None, None, None),
+    ("Logistic OR, $n$=139", 2.34, 0.96, 5.68, INK),
+    ("Cox HR, original controls, $n$=139", 1.79, 1.03, 3.10, INK),
+    ("Cox HR, re-drawn controls, $n$=138", 2.11, 1.17, 3.80, INK),
+    ("Cox HR, leakage-corrected, $n$=138", 1.49, 0.79, 2.83, INK),
 ]
 
 
 def make_fig3():
     _, _, _, _, co = data()
-    fig = plt.figure(figsize=(TEXTWIDTH_IN, 1.9))
+    fig = plt.figure(figsize=(TEXTWIDTH_IN + 0.07, 1.9))
     ax1 = fig.add_axes([0.065, 0.22, 0.27, 0.70])
     ax2 = fig.add_axes([0.645, 0.22, 0.18, 0.70])
 
     km_curve(ax1, co[co.official == 1].dur, co[co.official == 1].event, FOREST, "Official repository", 100)
     km_curve(ax1, co[co.official == 0].dur, co[co.official == 0].event, MUTED, "No official repository", 100)
     ax1.set_xlim(0, 72)
-    ax1.set_ylim(0, 5)
+    ax1.set_ylim(0, 6)
+    ax1.set_yticks([0, 2, 4, 6])
     ax1.set_xticks([0, 12, 24, 36, 48, 60, 72])
     ax1.set_xlabel("Months since arXiv posting")
     ax1.set_ylabel(r"Integrated (\%)")
-    ax1.legend(loc="lower right", bbox_to_anchor=(1.0, 0.34), handlelength=1.4, borderaxespad=0.0)
+    ax1.legend(loc="upper left", handlelength=1.4, borderaxespad=0.2)
     clean(ax1)
     panel_label(ax1, "a", x=-0.2)
 
