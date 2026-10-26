@@ -170,7 +170,7 @@ def make_fig1():
     ax.set_yticks([1, 2, 3])
     ax.set_yticklabels([f"{t} ($n$={len(d)})" for t, d in zip(order, vals)])
     ax.set_xlabel("Integration lag (months)")
-    ax.set_xlim(-2, 102)
+    ax.set_xlim(-3, 102)
     ax.set_xticks([0, 24, 48, 72, 96])
     clean(ax, left=False)
     panel_label(ax, "b", x=-0.86)
@@ -236,8 +236,8 @@ def make_fig3():
     km_curve(ax1, co[co.official == 1].dur, co[co.official == 1].event, FOREST, "Official repository", 100)
     km_curve(ax1, co[co.official == 0].dur, co[co.official == 0].event, MUTED, "No official repository", 100)
     ax1.set_xlim(0, 72)
-    ax1.set_ylim(0, 6)
-    ax1.set_yticks([0, 2, 4, 6])
+    ax1.set_ylim(0, 8)
+    ax1.set_yticks([0, 2, 4, 6, 8])
     ax1.set_xticks([0, 12, 24, 36, 48, 60, 72])
     ax1.set_xlabel("Months since arXiv posting")
     ax1.set_ylabel(r"Integrated (\%)")
@@ -268,7 +268,7 @@ def make_fig3():
     ax2.set_ylim(-0.7, n - 0.3)
     ax2.set_xlabel(r"Estimate (95\% CI)")
     clean(ax2, left=False)
-    panel_label(ax2, "b", x=-1.35)
+    panel_label(ax2, "b", x=-1.45)
     return fig
 
 
