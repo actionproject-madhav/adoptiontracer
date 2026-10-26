@@ -1,6 +1,7 @@
 """Command-line interface.
 
     adoptiontracer scan   --config artifacts.yaml --output results/
+    adoptiontracer events --config artifacts.yaml --output events/
     adoptiontracer lookup --config artifacts.yaml --arxiv 1312.6199
 """
 
@@ -97,6 +98,27 @@ def cmd_scan(args):
     print(f"\n  Output in {output_dir}/: papers_all.csv, papers_selected.csv, summary.json")
 
 
+def cmd_events(args):
+    """Write every first introduction of an arXiv identifier, one CSV per artifact."""
+    from .history import scan_history, write_events
+    from .trace import _compile_patterns
+
+    config = load_config(args.config)
+    output_dir = Path(args.output)
+    patterns = _compile_patterns(config)
+    if any(a.github_url for a in config.artifacts):
+        clone_or_update(config, progress_callback=lambda n, s: print(f"  {n}: {s}", flush=True))
+    for artifact in config.artifacts:
+        repo_path = config.get_repo_path(artifact)
+        if not repo_path.exists():
+            print(f"  {artifact.name}: repository missing, skipped")
+            continue
+        events = scan_history(repo_path, patterns)
+        slug = artifact.name.lower().split()[-1]
+        write_events(events, artifact.name, output_dir / f"{slug}.csv")
+        print(f"  {artifact.name}: {len(events)} introductions -> {slug}.csv")
+
+
 def cmd_lookup(args):
     """Report where and when one paper was integrated."""
     config = load_config(args.config)
@@ -181,6 +203,7 @@ def main():
         epilog="Examples:\n"
                "  adoptiontracer scan                         # scan default 9 AML artifacts\n"
                "  adoptiontracer scan -c my_artifacts.yaml    # scan custom artifacts\n"
+               "  adoptiontracer events -o data/events        # all first introductions, per artifact\n"
                "  adoptiontracer lookup --arxiv 1312.6199     # check one paper\n",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -201,6 +224,20 @@ def main():
     scan_parser.add_argument(
         "--output", "-o", default="results",
         help="Output directory for results (default: results/)",
+    )
+
+    # events command
+    events_parser = subparsers.add_parser(
+        "events",
+        help="Write every first introduction of an arXiv ID, one CSV per artifact",
+    )
+    events_parser.add_argument(
+        "--config", "-c", default=default_cfg,
+        help="Path to artifacts.yaml (default: the nine AML artifacts)",
+    )
+    events_parser.add_argument(
+        "--output", "-o", default="events",
+        help="Output directory (default: events/)",
     )
 
     # lookup command
@@ -226,5 +263,7 @@ def main():
 
     if args.command == "scan":
         cmd_scan(args)
+    elif args.command == "events":
+        cmd_events(args)
     elif args.command == "lookup":
         cmd_lookup(args)
