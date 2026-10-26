@@ -1,0 +1,122 @@
+# AdoptionTracer Artifact Configuration
+#
+# Each artifact represents a tool, benchmark, or framework whose
+# Git repository is scanned for research paper references.
+#
+# To add a new artifact: just add an entry with a github_url.
+# AdoptionTracer will auto-clone it on the next run.
+#
+# To run:
+#   python -m adoptiontracer scan --config artifacts.yaml --output results/
+
+# Where to clone/store artifact repositories (auto-created)
+repos_dir: ../artifact_repos
+
+# Paper reference patterns (regex capturing arXiv IDs)
+paper_patterns:
+  arxiv:
+    - 'arxiv\.org/abs/(\d{4}\.\d{4,5})'
+    - 'arxiv\.org/pdf/(\d{4}\.\d{4,5})'
+    - 'arXiv[:\s]+(\d{4}\.\d{4,5})'
+    - 'eprint\s*=\s*[{"](\d{4}\.\d{4,5})[}"]'
+
+# File extensions to scan within repos
+scan_extensions:
+  - .py
+  - .md
+  - .rst
+  - .txt
+  - .json
+  - .yaml
+  - .yml
+  - .bib
+  - .cfg
+  - .toml
+
+# arXiv IDs to exclude (non-AML papers like optimizers, architectures)
+exclude_ids:
+  - '1412.6980'   # Adam optimizer
+  - '1506.02025'  # Spatial Transformer Networks
+  - '1611.05431'  # ResNeXt
+  - '2111.14725'  # Vision Transformer search
+  - '1409.1556'   # VGGNet
+  - '1512.03385'  # ResNet
+  - '1409.4842'   # GoogLeNet
+  - '1502.03167'  # Batch normalization
+
+# Selection criteria for the study sample
+selection:
+  min_artifacts: 2
+  always_include_from:
+    - MITRE ATLAS
+
+# ============================================================================
+# Artifacts — just add a github_url and AMLTracer handles the rest
+# ============================================================================
+artifacts:
+
+  # --- Open-source tools (>= 1,000 GitHub stars) ---
+
+  - name: CleverHans
+    github_url: https://github.com/cleverhans-lab/cleverhans.git
+    type: Tool
+    selection_criteria: ">= 1,000 GitHub stars"
+    github_stars: 6401
+    description: "First major AML library (Toronto/Google Brain)"
+
+  - name: IBM ART
+    github_url: https://github.com/Trusted-AI/adversarial-robustness-toolbox.git
+    type: Tool
+    selection_criteria: ">= 1,000 GitHub stars"
+    github_stars: 5789
+    description: "Adversarial Robustness Toolbox (Linux Foundation)"
+
+  - name: TextAttack
+    github_url: https://github.com/QData/TextAttack.git
+    type: Tool
+    selection_criteria: ">= 1,000 GitHub stars"
+    github_stars: 3348
+    description: "NLP adversarial attack framework (QData Lab)"
+
+  - name: PyRIT
+    github_url: https://github.com/Azure/PyRIT.git
+    type: Tool
+    selection_criteria: ">= 1,000 GitHub stars"
+    github_stars: 3343
+    description: "LLM red-teaming framework (Microsoft)"
+
+  - name: Foolbox
+    github_url: https://github.com/bethgelab/foolbox.git
+    type: Tool
+    selection_criteria: ">= 1,000 GitHub stars"
+    github_stars: 2936
+    description: "Adversarial attacks with minimum perturbation (Bethge Lab)"
+
+  # --- Standardized benchmarks (peer-reviewed publication) ---
+
+  - name: RobustBench
+    github_url: https://github.com/RobustBench/robustbench.git
+    type: Benchmark
+    selection_criteria: "Peer-reviewed (NeurIPS 2021)"
+    description: "Standardized adversarial robustness leaderboard"
+
+  - name: AutoAttack
+    github_url: https://github.com/fra31/auto-attack.git
+    type: Benchmark
+    selection_criteria: "Peer-reviewed (ICML 2020)"
+    description: "Parameter-free attack ensemble for robustness evaluation"
+
+  - name: HarmBench
+    github_url: https://github.com/centerforaisafety/HarmBench.git
+    type: Benchmark
+    selection_criteria: "Peer-reviewed (ICML 2024)"
+    description: "Standardized LLM jailbreak evaluation framework"
+
+  # --- Regulatory frameworks ---
+
+  - name: MITRE ATLAS
+    github_url: https://github.com/mitre-atlas/atlas-data.git
+    type: Regulatory
+    selection_criteria: "Industry threat framework"
+    description: "Adversarial ML tactics and techniques (15 tactics, 66 techniques)"
+    git_search_mode: string
