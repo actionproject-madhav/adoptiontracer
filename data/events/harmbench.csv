@@ -1,0 +1,4 @@
+arxiv_id,artifact,file,author_date,commit_date,commit
+2402.04249,HarmBench,README.md,2024-02-07T02:18:00+00:00,2024-02-07T02:18:00+00:00,827414048c5fc90de9caa40404a145f7036308b3
+2310.16944,HarmBench,adversarial_training/alignment-handbook/README.md,2024-02-27T03:30:43+00:00,2024-02-27T03:30:43+00:00,c0423b952435fcc8467108d8f25962dbae5b7de2
+2401.06373,HarmBench,baselines/pap/PAP.py,2024-02-27T03:30:43+00:00,2024-02-27T03:30:43+00:00,c0423b952435fcc8467108d8f25962dbae5b7de2
