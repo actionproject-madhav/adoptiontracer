@@ -81,26 +81,6 @@ def km_curve(ax, dur, event, color, label, scale=1.0):
     ax.fill_between(t, lo, hi, step="post", color=color, alpha=0.12, linewidth=0)
 
 
-def swarm(values, x_per_pt, y0, step):
-    """Greedy 1-D beeswarm: returns y offsets so that no two markers overlap.
-    x_per_pt: data units of x per point of marker diameter; step: y offset per layer in data units."""
-    order = np.argsort(values)
-    placed = []  # (x, layer)
-    layers = np.zeros(len(values), dtype=int)
-    for i in order:
-        x = values[i]
-        used = {lay for (px, lay) in placed if abs(px - x) < x_per_pt}
-        lay = 0
-        while True:
-            cand = (lay + 1) // 2 * (1 if lay % 2 else -1)
-            if cand not in used:
-                break
-            lay += 1
-        layers[i] = cand
-        placed.append((x, cand))
-    return y0 + layers * step
-
-
 def load():
     pool = pd.read_csv(f"{L}/pool_261_first_events.csv", dtype={"arxiv_id": str})
     pool["pub"] = pd.to_datetime(pool.pub)
@@ -150,7 +130,7 @@ def make_fig1():
     ax = ax_a
     bins = np.arange(0, 103, 3)
     ax.hist(pool.lag, bins=bins, color=FOREST, edgecolor="white", linewidth=0.4)
-    ax.axvline(pool.lag.median(), color=VERMILLION, linestyle=(0, (4, 2)), linewidth=0.9)
+    ax.axvline(pool.lag.median(), color=INK, linestyle=(0, (4, 2)), linewidth=0.9)
     ax.set_xlabel("Integration lag (months)")
     ax.set_ylabel("Papers")
     ax.set_xlim(0, 102)
@@ -163,10 +143,9 @@ def make_fig1():
     vals = [pa[pa.typ == t].lag.values for t in order]
     ax.boxplot(vals, vert=False, widths=0.55, patch_artist=True, whis=(0, 100), showfliers=False,
                boxprops=dict(facecolor=HAIR, edgecolor=INK, linewidth=0.6),
-               medianprops=dict(color=VERMILLION, linewidth=1.2),
+               medianprops=dict(color=INK, linewidth=1.1),
                whiskerprops=dict(color=INK, linewidth=0.6),
-               capprops=dict(color=INK, linewidth=0.6),
-               flierprops=dict(marker="o", markersize=2.2, markerfacecolor="none", markeredgecolor=MUTED, markeredgewidth=0.5))
+               capprops=dict(color=INK, linewidth=0.6))
     ax.set_yticks([1, 2, 3])
     ax.set_yticklabels([f"{t} ($n$={len(d)})" for t, d in zip(order, vals)])
     ax.set_xlabel("Integration lag (months)")
@@ -176,15 +155,14 @@ def make_fig1():
     panel_label(ax, "b", x=-0.86)
 
     ax = ax_c
-    km_curve(ax, pool.lag.clip(lower=0.01), np.ones(len(pool)), FOREST, "Any file")
-    km_curve(ax, pc.dur, pc.event, VERMILLION, "Code-level")
+    km_curve(ax, pool.lag.clip(lower=0.01), np.ones(len(pool)), FOREST, "Any file", 100)
+    km_curve(ax, pc.dur, pc.event, VERMILLION, "Code-level", 100)
     ax.set_xlim(0, 72)
-    ax.set_ylim(0, 1.0)
+    ax.set_ylim(0, 100)
     ax.set_xticks([0, 12, 24, 36, 48, 60, 72])
-    ax.set_yticks([0, 0.25, 0.5, 0.75, 1.0])
-    ax.set_yticklabels(["0", "0.25", "0.5", "0.75", "1"])
+    ax.set_yticks([0, 25, 50, 75, 100])
     ax.set_xlabel("Months since arXiv posting")
-    ax.set_ylabel("Cumulative incidence")
+    ax.set_ylabel(r"Integrated (\%)")
     ax.legend(loc="lower right", handlelength=1.4, borderaxespad=0.3)
     clean(ax)
     panel_label(ax, "c", x=-0.3)
@@ -200,10 +178,9 @@ def make_fig2():
     vals = [f69[f69.Domain == d].lag.values for d in dom_order]
     ax.boxplot(vals, vert=False, widths=0.55, whis=(0, 100), showfliers=False, patch_artist=True,
                boxprops=dict(facecolor=HAIR, edgecolor=INK, linewidth=0.6),
-               medianprops=dict(color=VERMILLION, linewidth=1.2),
+               medianprops=dict(color=INK, linewidth=1.1),
                whiskerprops=dict(color=INK, linewidth=0.6),
-               capprops=dict(color=INK, linewidth=0.6),
-               flierprops=dict(marker="o", markersize=2.4, markerfacecolor="none", markeredgecolor=MUTED, markeredgewidth=0.5))
+               capprops=dict(color=INK, linewidth=0.6))
     ax.set_yticks(range(1, len(dom_order) + 1))
     ax.set_yticklabels([f"{d} ($n$={len(v)})" for d, v in zip(dom_order, vals)])
     ax.set_xlabel("Integration lag (months)")
