@@ -1,0 +1,287 @@
+arxiv_id,published,updated,title,code_latest,comment_latest
+1206.6389,2012-06-27,2013-03-25,Poisoning Attacks against Support Vector Machines,0,Appears in Proceedings of the 29th International Conference on Machine Learning (ICML 2012)
+1312.6199,2013-12-21,2014-02-19,Intriguing properties of neural networks,0,
+1412.6558,2014-12-19,2015-02-27,Random Walk Initialization for Training Very Deep Feedforward Networks,0,"10 pages, 4 figures"
+1412.6572,2014-12-20,2015-03-20,Explaining and Harnessing Adversarial Examples,0,
+1412.6980,2014-12-22,2017-01-30,Adam: A Method for Stochastic Optimization,0,"Published as a conference paper at the 3rd International Conference for Learning Representations, San Diego, 2015"
+1506.01497,2015-06-04,2016-01-06,Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks,0,Extended tech report
+1506.02025,2015-06-05,2016-02-04,Spatial Transformer Networks,0,
+1507.00677,2015-07-02,2016-06-11,Distributional Smoothing with Virtual Adversarial Training,0,Under review as a conference paper at ICLR 2016
+1511.04508,2015-11-14,2016-03-14,Distillation as a Defense to Adversarial Perturbations against Deep Neural Networks,0,
+1511.04599,2015-11-14,2016-07-04,DeepFool: a simple and accurate method to fool deep neural networks,0,"In Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016"
+1511.05122,2015-11-16,2016-03-04,Adversarial Manipulation of Deep Representations,0,Accepted as a conference paper at ICLR 2016
+1511.06581,2015-11-20,2016-04-05,Dueling Network Architectures for Deep Reinforcement Learning,0,"15 pages, 5 figures, and 5 tables"
+1511.07528,2015-11-24,2015-11-24,The Limitations of Deep Learning in Adversarial Settings,0,"Accepted to the 1st IEEE European Symposium on Security & Privacy, IEEE 2016. Saarbrucken, Germany"
+1512.02595,2015-12-08,2015-12-08,Deep Speech 2: End-to-End Speech Recognition in English and Mandarin,0,
+1512.03385,2015-12-10,2015-12-10,Deep Residual Learning for Image Recognition,0,Tech report
+1602.02697,2016-02-08,2017-03-19,Practical Black-Box Attacks against Machine Learning,0,"Proceedings of the 2017 ACM Asia Conference on Computer and Communications Security, Abu Dhabi, UAE"
+1602.07261,2016-02-23,2016-08-23,"Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning",0,
+1603.00892,2016-03-02,2016-03-02,Counter-fitting Word Vectors to Linguistic Constraints,0,Paper accepted for the 15th Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2016)
+1603.05027,2016-03-16,2016-07-25,Identity Mappings in Deep Residual Networks,1,ECCV 2016 camera-ready
+1605.07146,2016-05-23,2017-06-14,Wide Residual Networks,1,
+1605.07277,2016-05-24,2016-05-24,Transferability in Machine Learning: from Phenomena to Black-Box Attacks using Adversarial Samples,0,
+1607.02533,2016-07-08,2017-02-11,Adversarial examples in the physical world,0,"14 pages, 6 figures. Demo available at https://youtu.be/zQ_uMenoBCk"
+1608.00853,2016-08-02,2016-08-02,A study of the effect of JPG compression on adversarial images,0,"8 pages, 4 figures"
+1608.04644,2016-08-16,2017-03-22,Towards Evaluating the Robustness of Neural Networks,0,
+1610.00768,2016-10-03,2018-06-27,Technical Report on the CleverHans v2.1.0 Adversarial Examples Library,1,Technical report for https://github.com/tensorflow/cleverhans
+1610.05820,2016-10-18,2017-03-31,Membership Inference Attacks against Machine Learning Models,0,"In the proceedings of the IEEE Symposium on Security and Privacy, 2017"
+1610.08401,2016-10-26,2017-03-09,Universal adversarial perturbations,0,"Accepted at IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017"
+1611.01236,2016-11-04,2017-02-11,Adversarial Machine Learning at Scale,0,"17 pages, 5 figures"
+1611.05431,2016-11-16,2017-04-11,Aggregated Residual Transformations for Deep Neural Networks,1,Accepted to CVPR 2017. Code and models: https://github.com/facebookresearch/ResNeXt
+1703.06857,2017-03-20,2017-08-07,On the Limitation of Convolutional Neural Networks in Recognizing Negative Images,0,
+1704.01155,2017-04-04,2017-12-05,Feature Squeezing: Detecting Adversarial Examples in Deep Neural Networks,0,To appear in Network and Distributed Systems Security Symposium (NDSS) 2018
+1705.02364,2017-05-05,2018-07-08,Supervised Learning of Universal Sentence Representations from Natural Language Inference Data,0,EMNLP 2017
+1705.02900,2017-05-08,2017-05-08,Keeping the Bad Guys Out: Protecting and Vaccinating Deep Learning with JPEG Compression,0,
+1705.07204,2017-05-19,2020-04-26,Ensemble Adversarial Training: Attacks and Defenses,0,"22 pages, 5 figures, International Conference on Learning Representations (ICLR) 2018 (amended in April 2020 to include subsequent attacks that significantly reduced the robustness of our models)"
+1705.07263,2017-05-20,2017-11-01,Adversarial Examples Are Not Easily Detected: Bypassing Ten Detection Methods,0,
+1706.05394,2017-06-16,2017-07-01,A Closer Look at Memorization in Deep Networks,0,"Appears in Proceedings of the 34th International Conference on Machine Learning (ICML 2017), Devansh Arpit, Stanisław Jastrzębski, Nicolas Ballas, and David Krueger contributed equally to this work"
+1706.06083,2017-06-19,2019-09-04,Towards Deep Learning Models Resistant to Adversarial Attacks,1,ICLR'18
+1706.10295,2017-06-30,2019-07-09,Noisy Networks for Exploration,0,ICLR 2018
+1707.04131,2017-07-13,2018-03-20,Foolbox: A Python toolbox to benchmark the robustness of machine learning models,1,Code and examples available at https://github.com/bethgelab/foolbox and documentation available at http://foolbox.readthedocs.io
+1708.03999,2017-08-14,2017-11-02,ZOO: Zeroth Order Optimization based Black-box Attacks to Deep Neural Networks without Training Substitute Models,0,Accepted by 10th ACM Workshop on Artificial Intelligence and Security (AISEC) with the 24th ACM Conference on Computer and Communications Security (CCS)
+1708.04552,2017-08-15,2017-11-29,Improved Regularization of Convolutional Neural Networks with Cutout,1,
+1708.06733,2017-08-22,2019-03-11,BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain,0,
+1709.04114,2017-09-13,2018-02-10,EAD: Elastic-Net Attacks to Deep Neural Networks via Adversarial Examples,0,To be published at AAAI 2018
+1710.06081,2017-10-17,2018-03-22,Boosting Adversarial Attacks with Momentum,0,CVPR 2018 Spotlight
+1710.08864,2017-10-24,2019-10-17,One pixel attack for fooling deep neural networks,0,
+1710.09412,2017-10-25,2018-04-27,mixup: Beyond Empirical Risk Minimization,0,ICLR camera ready version. Changes vs V1: fix repo URL; add ablation studies; add mixup + dropout etc
+1710.10766,2017-10-30,2018-05-21,PixelDefend: Leveraging Generative Models to Understand and Defend against Adversarial Examples,0,ICLR 2018
+1712.02779,2017-12-07,2019-09-16,Exploring the Landscape of Spatial Robustness,1,"ICML 2019. Presented in NIPS 2017 Workshop on Machine Learning and Computer Security as ""A Rotation and a Translation Suffice: Fooling CNNs with Simple Transformations."""
+1712.04248,2017-12-12,2018-02-16,Decision-Based Adversarial Attacks: Reliable Attacks Against Black-Box Machine Learning Models,1,Published as a conference paper at the Sixth International Conference on Learning Representations (ICLR 2018) https://openreview.net/forum?id=SyZI0GWCZ
+1712.06751,2017-12-19,2018-05-24,HotFlip: White-Box Adversarial Examples for Text Classification,0,
+1712.07113,2017-12-19,2018-04-06,Query-Efficient Black-box Adversarial Examples (superceded),0,"Superceded by ""Black-Box Adversarial Attacks with Limited Queries and Information."""
+1712.09136,2017-12-25,2017-12-25,Towards Measuring Membership Privacy,0,
+1712.09344,2017-12-23,2017-12-23,"Whatever Does Not Kill Deep Reinforcement Learning, Makes It Stronger",0,arXiv admin note: text overlap with arXiv:1701.04143
+1712.09665,2017-12-27,2018-05-17,Adversarial Patch,1,
+1801.01944,2018-01-05,2018-03-30,Audio Adversarial Examples: Targeted Attacks on Speech-to-Text,0,
+1801.04354,2018-01-13,2018-05-23,Black-box Generation of Adversarial Text Sequences to Evade Deep Learning Classifiers,0,This is an extended version of the 6page Workshop version appearing in 1st Deep Learning and Security Workshop colocated with IEEE S&P
+1801.10578,2018-01-31,2018-01-31,Evaluating the Robustness of Neural Networks: An Extreme Value Theory Approach,0,Accepted by Sixth International Conference on Learning Representations (ICLR 2018). Tsui-Wei Weng and Huan Zhang contributed equally
+1802.00420,2018-02-01,2018-07-31,Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples,1,ICML 2018. Source code at https://github.com/anishathalye/obfuscated-gradients
+1802.03162,2018-02-09,2018-03-02,URLNet: Learning a URL Representation with Deep Learning for Malicious URL Detection,0,
+1802.05666,2018-02-15,2018-06-12,Adversarial Risk and the Dangers of Evaluating Against Weak Attacks,0,
+1803.01128,2018-03-03,2020-04-20,Seq2Sick: Evaluating the Robustness of Sequence-to-Sequence Models with Adversarial Examples,0,
+1803.04765,2018-03-13,2018-03-13,"Deep k-Nearest Neighbors: Towards Confident, Interpretable and Robust Deep Learning",0,
+1803.08494,2018-03-22,2018-06-11,Group Normalization,1,v3: Update trained-from-scratch results in COCO to 41.0AP. Code and models at https://github.com/facebookresearch/Detectron/blob/master/projects/GN
+1803.09868,2018-03-27,2018-03-27,Bypassing Feature Squeezing by Increasing Adversary Strength,0,
+1804.00097,2018-03-31,2018-03-31,Adversarial Attacks and Defences Competition,0,"36 pages, 10 figures"
+1804.00792,2018-04-03,2018-11-10,Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks,0,"Presented at the NIPS 2018 conference. 11 pages, 4 figures, with a supplementary section of 7 pages, 7 figures. First two authors contributed equally"
+1804.02767,2018-04-08,2018-04-08,YOLOv3: An Incremental Improvement,0,Tech Report
+1804.07781,2018-04-20,2018-08-28,Pathologies of Neural Models Make Interpretations Difficult,0,EMNLP 2018 camera ready
+1804.07998,2018-04-21,2018-09-24,Generating Natural Language Adversarial Examples,0,Accepted in EMNLP 2018 (Conference on Empirical Methods in Natural Language Processing)
+1805.06087,2018-05-16,2018-05-16,Learning to Write with Cooperative Discriminators,0,In Proceedings of ACL 2018
+1805.09190,2018-05-23,2018-09-20,Towards the first adversarially robust neural network model on MNIST,0,
+1805.11090,2018-05-28,2019-07-01,GenAttack: Practical Black-box Attacks with Gradient-Free Optimization,0,Accepted in The Genetic and Evolutionary Computation Conference (GECCO) 2019
+1805.12152,2018-05-30,2019-09-09,Robustness May Be at Odds with Accuracy,0,ICLR'19
+1806.00054,2018-05-31,2018-12-13,Defending Against Machine Learning Model Stealing Attacks Using Deceptive Perturbations,0,Under review for a peer review conference
+1806.02299,2018-06-05,2019-04-23,DPatch: An Adversarial Patch Attack on Object Detectors,0,AAAI Workshop on Artificial Intelligence Safety (SafeAI 2019) Oral Presentation
+1806.05476,2018-06-14,2018-06-14,Copycat CNN: Stealing Knowledge by Persuading Confession with Random Non-Labeled Data,0,"8 pages, 3 figures, accepted by IJCNN 2018"
+1809.10875,2018-09-28,2019-06-05,Characterizing Audio Adversarial Examples Using Temporal Dependency,0,
+1810.08280,2018-10-18,2019-04-13,Exploring Adversarial Examples in Malware Detection,0,
+1810.12715,2018-10-30,2019-08-29,On the Effectiveness of Interval Bound Propagation for Training Verifiably Robust Models,0,"[v2] Best paper at NeurIPS SECML 2018 Workshop [v4] Accepted at ICCV 2019 under the title ""Scalable Verified Training for Provably Robust Image Classification"""
+1811.03194,2018-11-08,2019-08-26,AdVersarial: Perceptual Ad Blocking meets Adversarial Machine Learning,0,"17 pages, 14 figures"
+1811.03685,2018-11-08,2018-11-08,New CleverHans Feature: Better Adversarial Robustness Evaluations with Attack Bundling,0,
+1811.03728,2018-11-09,2018-11-09,Detecting Backdoor Attacks on Deep Neural Networks by Activation Clustering,0,
+1811.09600,2018-11-23,2019-04-03,Decoupling Direction and Norm for Efficient Gradient-Based L2 Adversarial Attacks and Defenses,0,Accepted as a conference paper to the 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR oral presentation)
+1811.11875,2018-11-28,2018-11-28,Adversarial Attacks for Optical Flow-Based Action Recognition Classifiers,0,
+1811.12231,2018-11-29,2022-11-09,ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness,0,Accepted at ICLR 2019 (oral)
+1812.02606,2018-12-06,2019-11-17,The Limitations of Model Uncertainty in Adversarial Settings,0,"Accepted to the Bayesian Deep Learning Workshop 2019 at NeurIPS. For longer version with more background, refer to previous version"
+1812.02766,2018-12-06,2018-12-06,Knockoff Nets: Stealing Functionality of Black-Box Models,0,
+1812.05271,2018-12-13,2018-12-13,TextBugger: Generating Adversarial Text Against Real-world Applications,0,To appear in NDSS 2019
+1901.03583,2019-01-11,2019-01-24,Explaining Vulnerabilities of Deep Learning to Adversarial Malware Binaries,0,
+1901.08573,2019-01-24,2019-06-24,Theoretically Principled Trade-off between Robustness and Accuracy,0,Appeared in ICML 2019; the winning methodology of the NeurIPS 2018 Adversarial Vision Challenge
+1901.09960,2019-01-28,2019-10-20,Using Pre-Training Can Improve Model Robustness and Uncertainty,1,ICML 2019. PyTorch code here: https://github.com/hendrycks/pre-training Figure 3 updated
+1901.11196,2019-01-31,2019-08-25,EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks,0,EMNLP-IJCNLP 2019 short paper
+1902.01889,2019-02-05,2019-02-05,Analyzing and Improving Representations with the Soft Nearest Neighbor Loss,0,
+1902.02918,2019-02-08,2019-06-15,Certified Adversarial Robustness via Randomized Smoothing,1,ICML 2019
+1902.06531,2019-02-18,2020-01-17,STRIP: A Defence Against Trojan Attacks on Deep Neural Networks,0,13 pages
+1902.06705,2019-02-18,2019-02-20,On Evaluating Adversarial Robustness,1,Living document; source available at https://github.com/evaluating-adversarial-robustness/adv-eval-paper/
+1902.07906,2019-02-21,2020-01-18,Wasserstein Adversarial Examples via Projected Sinkhorn Iterations,1,
+1902.08295,2019-02-21,2019-02-21,Lingvo: a Modular and Scalable Framework for Sequence-to-Sequence Modeling,0,
+1902.08722,2019-02-23,2020-01-10,A Convex Relaxation Barrier to Tight Robustness Verification of Neural Networks,1,"Poster at the 33rd Conference on Neural Information Processing Systems (NeurIPS 2019), Vancouver, Canada"
+1903.10346,2019-03-22,2019-06-07,"Imperceptible, Robust, and Targeted Adversarial Examples for Automatic Speech Recognition",0,"International Conference on Machine Learning (ICML), 2019"
+1904.00887,2019-04-01,2019-07-28,Adversarial Defense by Restricting the Hidden Space of Deep Neural Networks,0,Accepted at ICCV 2019
+1904.02144,2019-04-03,2020-04-28,HopSkipJumpAttack: A Query-Efficient Decision-Based Attack,0,
+1904.09675,2019-04-21,2020-02-24,BERTScore: Evaluating Text Generation with BERT,1,Code available at https://github.com/Tiiiger/bert_score; To appear in ICLR2020
+1904.11042,2019-04-24,2019-09-15,Physical Adversarial Textures that Fool Visual Object Tracking,0,Accepted to the International Conference on Computer Vision (ICCV) 2019
+1904.12843,2019-04-29,2019-11-20,Adversarial Training for Free!,1,Accepted to NeurIPS 2019
+1904.13000,2019-04-30,2019-10-18,Adversarial Training and Robustness for Multiple Perturbations,0,"Accepted at NeurIPS 2019, 23 pages"
+1905.00877,2019-05-02,2019-11-01,You Only Propagate Once: Accelerating Adversarial Training via Maximal Principle,1,Accepted as a conference paper at NeurIPS 2019
+1905.01034,2019-05-03,2019-05-03,Transfer of Adversarial Robustness Between Perturbation Types,0,"11 pages, 6 figures"
+1905.04899,2019-05-13,2019-08-07,CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features,1,"Accepted at ICCV 2019 (oral talk). 14 pages, 5 figures"
+1905.05186,2019-05-13,2019-06-25,Harnessing the Vulnerability of Latent Layers in Adversarially Trained Models,0,Accepted at IJCAI 2019
+1905.07121,2019-05-17,2019-08-15,Simple Black-box Adversarial Attacks,0,Published at ICML 2019
+1905.10510,2019-05-25,2019-10-29,Enhancing Adversarial Defense by k-Winners-Take-All,0,
+1905.10626,2019-05-25,2020-02-20,Rethinking Softmax Cross-Entropy Loss for Adversarial Robustness,0,ICLR 2020
+1905.11268,2019-05-27,2019-08-29,Combating Adversarial Misspellings with Robust Word Recognition,0,"ACL 2019, long paper"
+1905.11911,2019-05-28,2019-10-27,Controlling Neural Level Sets,0,NeurIPS 2019
+1905.13409,2019-05-31,2020-06-06,Bypassing Backdoor Detection Algorithms in Deep Learning,0,IEEE European Symposium on Security and Privacy 2020
+1905.13725,2019-05-31,2019-12-05,Are Labels Required for Improving Adversarial Robustness?,0,Appears in the Thirty-Third Annual Conference on Neural Information Processing Systems (NeurIPS 2019)
+1905.13736,2019-05-31,2022-01-13,Unlabeled Data Improves Adversarial Robustness,0,Corrected some math typos in the proof of Lemma 1
+1906.00945,2019-06-03,2019-09-27,Adversarial Robustness as a Prior for Learned Representations,0,
+1906.03849,2019-06-10,2019-12-09,Robustness Verification of Tree-based Models,0,Hongge Chen and Huan Zhang contributed equally
+1906.04584,2019-06-09,2020-01-10,Provably Robust Deep Learning via Adversarially Trained Smoothed Classifiers,1,"Spotlight at the 33rd Conference on Neural Information Processing Systems (NeurIPS 2019), Vancouver, Canada; 9 pages main text; 31 pages total"
+1906.06026,2019-06-14,2020-07-16,Adversarial Robustness Assessment: Why both $L_0$ and $L_\infty$ Attacks Are Necessary,0,
+1906.06316,2019-06-14,2019-11-27,Towards Stable and Efficient Training of Verifiably Robust Neural Networks,1,
+1906.07153,2019-06-17,2019-06-20,Adversarial attacks on Copyright Detection Systems,0,
+1906.08988,2019-06-21,2020-09-17,A Fourier Perspective on Model Robustness in Computer Vision,0,NeurIPS 2019
+1906.11897,2019-06-20,2019-06-20,On Physical Adversarial Patches for Object Detection,0,
+1907.01003,2019-07-01,2019-12-12,"Accurate, reliable and fast robustness evaluation",0,Accepted at the 2019 Conference on Neural Information Processing Systems
+1907.02044,2019-07-03,2020-07-20,Minimally distorted Adversarial Examples with a Fast Adaptive Boundary Attack,0,
+1907.02610,2019-07-04,2019-10-10,Adversarial Robustness through Local Linearization,0,
+1907.11932,2019-07-27,2020-04-08,Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment,1,AAAI 2020 (Oral)
+1909.00986,2019-09-03,2019-09-03,Certified Robustness to Adversarial Word Substitutions,0,EMNLP 2019
+1909.01838,2019-09-03,2020-03-03,High Accuracy and High Fidelity Extraction of Neural Networks,0,"USENIX Security 2020, 18 pages, 6 figures"
+1909.02560,2019-09-05,2020-10-05,Robustness to Modification with Shared Words in Paraphrase Identification,0,Findings of EMNLP 2020
+1909.06723,2019-09-15,2021-06-15,Natural Language Adversarial Defense through Synonym Encoding,1,"Accepted by UAI 2021, code is avaliable at https://github.com/JHL-HUST/SEM"
+1909.08723,2019-09-18,2019-10-15,Espresso: A Fast End-to-end Neural Speech Recognition Toolkit,0,Accepted to ASRU 2019
+1909.10773,2019-09-24,2020-02-14,Sign-OPT: A Query-Efficient Hard-label Adversarial Attack,0,Published in ICLR 2020
+1909.11764,2019-09-25,2020-04-23,FreeLB: Enhanced Adversarial Training for Natural Language Understanding,1,Adding results with ALBERT
+1910.00033,2019-09-30,2019-12-21,Hidden Trigger Backdoor Attacks,0,AAAI 2020 - Main Technical Track (Oral)
+1910.08640,2019-10-18,2019-10-23,Are Perceptually-Aligned Gradients a General Property of Robust Classifiers?,0,"To appear in the ""Science Meets Engineering of Deep Learning"" Workshop at NeurIPS 2019"
+1911.03274,2019-11-08,2019-12-13,Imperceptible Adversarial Attacks on Tabular Data,0,"presented at NeurIPS 2019 Workshop on Robust AI in Financial Services: Data, Fairness, Explainability, Trustworthiness, and Privacy (Robust AI in FS 2019), Vancouver, Canada"
+1911.06502,2019-11-15,2019-11-18,Simple iterative method for generating targeted universal adversarial perturbations,0,"4 pages, 3 figures, 1 table"
+1911.09665,2019-11-21,2020-04-14,Adversarial Examples Improve Image Recognition,1,"CVPR 2020, models are available at https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet"
+1912.00049,2019-11-29,2020-07-29,Square Attack: a query-efficient black-box adversarial attack via random search,1,"Accepted at ECCV 2020; added imperceptible perturbations, analysis of examples that require more queries, results on dilated CNNs"
+1912.02781,2019-12-05,2020-02-17,AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty,1,Code available at https://github.com/google-research/augmix
+1912.10185,2019-12-21,2020-01-29,Jacobian Adversarially Regularized Networks for Robustness,0,ICLR 2020 Camera Ready
+2001.02378,2020-01-08,2022-03-14,MACER: Attack-free and Scalable Robust Training via Maximizing Certified Radius,0,Published in ICLR 2020. 20 Pages
+2001.03994,2020-01-12,2020-01-12,Fast is better than free: Revisiting adversarial training,1,
+2002.05123,2020-02-12,2021-06-04,Over-the-Air Adversarial Flickering Attacks against Video Recognition Networks,0,
+2002.07088,2020-02-17,2022-02-28,GRAPHITE: Generating Automatic Physical Examples for Machine-Learning Attacks on Computer Vision Systems,0,IEEE European Symposium on Security and Privacy 2022 (EuroS&P 2022)
+2002.08347,2020-02-19,2020-10-23,On Adaptive Attacks to Adversarial Example Defenses,0,NeurIPS 2020
+2002.08619,2020-02-20,2020-11-25,Boosting Adversarial Training with Hypersphere Embedding,0,NeurIPS 2020
+2002.10319,2020-02-24,2020-09-30,Self-Adaptive Training: beyond Empirical Risk Minimization,1,To appear in NeurIPS 2020
+2002.10509,2020-02-24,2020-11-10,HYDRA: Pruning Adversarially Robust Neural Networks,1,NeurIPS 2020
+2002.10733,2020-02-25,2021-01-08,(De)Randomized Smoothing for Certifiable Defense against Patch Attacks,1,NeurIPS 2020
+2002.11242,2020-02-26,2020-09-05,Attacks Which Do Not Kill Training Make Adversarial Learning Stronger,0,Thirty-seventh International Conference on Machine Learning (ICML 2020)
+2002.11569,2020-02-26,2020-03-04,Overfitting in adversarially robust deep learning,1,
+2003.01690,2020-03-03,2020-08-04,Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks,0,In ICML 2020
+2003.04286,2020-03-09,2020-09-22,Manifold Regularization for Locally Stable Deep Neural Networks,0,
+2003.06468,2020-03-13,2020-03-13,GeoDA: a geometric framework for black-box adversarial attacks,0,"In Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2020"
+2003.08937,2020-03-19,2020-03-19,Breaking certified defenses: Semantic adversarial examples with spoofed robustness certificates,0,
+2003.09347,2020-03-18,2021-11-08,SAT: Improving Adversarial Training via Curriculum-Based Loss Smoothing,0,Published at AISec '21: Proceedings of the 14th ACM Workshop on Artificial Intelligence and Security. ACM DL link: https://dl.acm.org/doi/abs/10.1145/3474369.3486878
+2003.09461,2020-03-20,2020-07-29,Adversarial Robustness on In- and Out-Distribution Improves Explainability,0,
+2003.12862,2020-03-28,2020-03-28,Adversarial Robustness: From Self-Supervised Pre-Training to Fine-Tuning,1,CVPR 2020
+2004.01970,2020-04-04,2020-10-08,BAE: BERT-based Adversarial Examples for Text Classification,0,Accepted at EMNLP 2020 Main Conference
+2004.05884,2020-04-13,2020-10-13,Adversarial Weight Perturbation Helps Robust Generalization,0,To appear in NeurIPS 2020
+2004.09984,2020-04-21,2020-10-02,BERT-ATTACK: Adversarial Attack Against BERT Using BERT,1,Accepted by EMNLP2020
+2004.10934,2020-04-23,2020-04-23,YOLOv4: Optimal Speed and Accuracy of Object Detection,1,
+2004.14174,2020-04-25,2021-12-21,Reevaluating Adversarial Examples in Natural Language,0,15 pages; 9 Tables; 5 Figures
+2004.15015,2020-04-30,2021-01-03,Imitation Attacks and Defenses for Black-box Machine Translation Systems,0,EMNLP 2020
+2005.00191,2020-05-01,2021-03-14,Bullseye Polytope: A Scalable Clean-Label Poisoning Attack with Improved Transferability,0,
+2005.04118,2020-05-08,2020-05-08,Beyond Accuracy: Behavioral Testing of NLP models with CheckList,0,
+2005.05909,2020-04-29,2020-10-05,"TextAttack: A Framework for Adversarial Attacks, Data Augmentation, and Adversarial Training in NLP",1,6 pages. More details are shared at https://github.com/QData/TextAttack
+2005.12872,2020-05-26,2020-05-28,End-to-End Object Detection with Transformers,1,
+2006.07682,2020-06-13,2021-11-19,Rethinking Clustering for Robustness,0,Accepted to the 32nd British Machine Vision Conference (BMVC'21)
+2006.14768,2020-06-26,2021-03-18,Deep Partition Aggregation: Provable Defense against General Poisoning Attacks,0,ICLR 2021
+2006.16241,2020-06-29,2021-07-24,The Many Faces of Robustness: A Critical Analysis of Out-of-Distribution Generalization,1,"ICCV 2021; Datasets, code, and models available at https://github.com/hendrycks/imagenet-r"
+2007.02617,2020-07-06,2020-10-24,Understanding and Improving Fast Adversarial Training,1,The camera-ready version (accepted at NeurIPS 2020)
+2007.05869,2020-07-11,2021-04-24,Adversarially-Trained Deep Nets Transfer Better: Illustration on Image Classification,0,Published as a conference paper at ICLR 2021
+2007.07677,2020-07-15,2020-07-15,Fast Differentiable Clipping-Aware Normalization and Rescaling,0,
+2007.08489,2020-07-16,2020-12-08,Do Adversarially Robust ImageNet Models Transfer Better?,1,NeurIPS 2020
+2007.14321,2020-07-28,2021-12-05,Label-Only Membership Inference Attacks,0,"16 pages, 11 figures, 2 tables Revision 2: 19 pages, 12 figures, 3 tables. Improved text and additional experiments. Final ICML paper"
+2007.15528,2020-07-30,2021-09-17,Membership Leakage in Label-Only Exposures,0,"To Appear in 2021 ACM SIGSAC Conference on Computer and Communications Security (CCS '21), November 15--19, 2021, Virtual Event, Republic of Korea"
+2008.03364,2020-08-07,2020-08-07,Improving the Speed and Quality of GAN by Adversarial Training,0,
+2008.04175,2020-08-10,2020-08-10,"EagerPy: Writing Code That Works Natively with PyTorch, TensorFlow, JAX, and NumPy",1,
+2008.07125,2020-08-17,2021-03-22,Adversarial EXEmples: A Survey and Experimental Evaluation of Practical Attacks on Machine Learning for Windows Malware ,0,
+2009.02276,2020-09-04,2021-05-10,Witches' Brew: Industrial Scale Data Poisoning via Gradient Matching,0,"First two authors contributed equally. Last two authors contributed equally. 21 pages, 11 figures. Published at ICLR 2021"
+2009.04131,2020-09-09,2023-04-12,SoK: Certified Robustness for Deep Neural Networks,0,To appear at 2023 IEEE Symposium on Security and Privacy (SP) (Version 8); include recent progress till Apr 2023 in Version 9; 14 pages for the main text; benchmark & tool website: http://sokcertifiedrobustness.github.io/
+2009.06368,2020-09-09,2020-10-12,Searching for a Search Method: Benchmarking Search Algorithms for Generating NLP Adversarial Examples,1,"14 pages, 5 figures, 4 tables; Accepted by EMNLP BlackBox NLP Workshop 2020 @ https://blackboxnlp.github.io/cfp.html"
+2009.07502,2020-09-16,2021-03-15,Contextualized Perturbation for Textual Adversarial Attack,0,"Accepted by NAACL 2021, long paper"
+2010.00467,2020-10-01,2021-03-31,Bag of Tricks for Adversarial Training,0,ICLR 2021
+2010.01278,2020-10-03,2021-12-30,Efficient Robust Training via Backward Smoothing,0,"12 pages, 15 tables, 6 figures. In AAAI 2022"
+2010.01279,2020-10-03,2021-08-14,Do Wider Neural Networks Really Help Adversarial Robustness?,0,"24 pages, 6 tables, 9 figures"
+2010.01724,2020-10-05,2020-10-05,TextAttack: Lessons learned in designing Python frameworks for NLP,0,4 pages
+2010.01736,2020-10-05,2021-05-31,Geometry-aware Instance-reweighted Adversarial Training,1,"ICLR 2021, Oral, Code <https://github.com/zjfheart/Geometry-aware-Instance-reweighted-Adversarial-Training>"
+2010.03593,2020-10-07,2021-03-30,Uncovering the Limits of Adversarial Training against Norm-Bounded Adversarial Examples,1,Fixed minor formatting issues and added link to models
+2010.09670,2020-10-19,2021-10-31,RobustBench: a standardized adversarial robustness benchmark,1,"The camera-ready version accepted at the NeurIPS'21 Datasets and Benchmarks Track: 120+ evaluations, 80+ models, 7 leaderboards (Linf, L2, common corruptions; CIFAR-10, CIFAR-100, ImageNet), significantly expanded analysis part (calibration, fairness, privacy leakage, smoothness, transferability)"
+2011.03083,2020-11-03,2020-11-24,A Tunable Robust Pruning Framework Through Dynamic Network Rewiring of DNNs,0,"8 pages, 4 figures, conference paper"
+2011.11164,2020-11-23,2021-08-16,Learnable Boundary Guided Adversarial Training,1,ICCV2021
+2101.06896,2021-01-18,2021-01-18,DeepPayload: Black-box Backdoor Attack on Deep Learning Models through Neural Payload Injection,0,ICSE 2021
+2102.12827,2021-02-25,2021-11-19,Fast Minimum-norm Adversarial Attacks through Adaptive Norm Constraints,0,Accepted at NeurIPS'21
+2103.01208,2021-03-01,2023-11-24,Mind the box: $l_1$-APGD for sparse adversarial attacks on image classifiers,0,In ICML 2021. Fixed typos in Eq. (3) and Eq. (4)
+2103.01946,2021-03-02,2021-10-18,Fixing Data Augmentation to Improve Adversarial Robustness,0,"Since its original publication (2 Mar 2021), this paper has been accepted to NeurIPS 2021 as two separate and updated papers (Rebuffi et al., 2021; Gowal et al., 2021). The new papers improve results and clarity"
+2103.02079,2021-03-02,2021-04-08,DP-InstaHide: Provably Defusing Poisoning and Backdoor Attacks with Differentially Private Data Augmentations,0,"11 pages, 5 figures"
+2103.02325,2021-03-03,2022-01-04,On the effectiveness of adversarial training against common corruptions,1,"New calibration results, more comprehensive experimental evaluation (e.g., new results with AugMix+JSD and DeepAugment)"
+2103.03874,2021-03-05,2021-11-08,Measuring Mathematical Problem Solving With the MATH Dataset,1,NeurIPS 2021. Code and the MATH dataset is available at https://github.com/hendrycks/math/
+2103.06504,2021-03-11,2021-03-11,Adversarial Laser Beam: Effective Physical-World Attack to DNNs in a Blink,0,Accepted to CVPR2021
+2103.14030,2021-03-25,2021-08-17,Swin Transformer: Hierarchical Vision Transformer using Shifted Windows,1,
+2104.01086,2021-04-02,2021-12-16,Defending Against Image Corruptions Through Adversarial Augmentations,0,
+2104.09425,2021-04-19,2022-03-03,Robust Learning Meets Generative Models: Can Proxy Distributions Improve Adversarial Robustness?,0,"ICLR 2022 version (30 pages, 13 figures, 12 tables)"
+2106.02078,2021-06-03,2021-10-15,Improving Neural Network Robustness via Persistency of Excitation,0,
+2106.08970,2021-06-16,2022-10-13,Sleeper Agent: Scalable Hidden Trigger Backdoors for Neural Networks Trained from Scratch,1,NeurIPS 2022
+2106.09129,2021-06-16,2021-11-05,A Winning Hand: Compressing Deep Networks Can Improve Out-Of-Distribution Robustness,1,
+2106.09898,2021-06-18,2021-12-11,Bad Characters: Imperceptible NLP Attacks,0,"To appear in the 43rd IEEE Symposium on Security and Privacy. Revisions: NER & sentiment analysis experiments, previous work comparison, defense evaluation"
+2106.09947,2021-06-18,2022-10-11,Indicators of Attack Failure: Debugging and Improving Optimization of Adversarial Examples,1,Accepted at NeurIPS 2022
+2108.01644,2021-08-03,2022-12-14,The Devil is in the GAN: Backdoor Attacks and Defenses in Deep Generative Models,0,"17 pages, 11 figures, 3 tables"
+2109.00544,2021-09-01,2021-09-11,Towards Improving Adversarial Training of NLP Models,1,EMNLP Findings 2021
+2110.03825,2021-10-07,2022-01-23,Exploring Architectural Ingredients of Adversarially Robust Deep Neural Networks,1,NeurIPS 2021
+2110.05626,2021-10-11,2021-10-11,Parameterizing Activation Functions for Adversarial Robustness,0,
+2110.07719,2021-10-11,2021-10-11,Certified Patch Robustness via Smoothed Vision Transformers,1,
+2110.09468,2021-10-18,2021-12-14,Improving Robustness using Generated Data,0,Accepted at NeurIPS 2021; Added ImageNet results
+2110.12976,2021-10-25,2021-10-25,Stable Neural ODE with Lyapunov-Stable Equilibrium Points for Defending Against Adversarial Attacks,0,
+2110.14168,2021-10-27,2021-11-18,Training Verifiers to Solve Math Word Problems,0,
+2111.02331,2021-11-03,2025-11-26,LTD: Low Temperature Distillation for Gradient Masking-free Adversarial Training,0,
+2111.09277,2021-11-17,2021-11-17,SmoothMix: Training Confidence-calibrated Smoothed Classifiers for Certified Robustness,1,24 pages; NeurIPS 2021; Code is available at https://github.com/jh-jeong/smoothmix
+2111.14725,2021-11-29,2021-11-29,Searching the Search Space of Vision Transformer,1,Accepted to NIPS 2021
+2112.02230,2021-12-04,2022-09-05,SHAPr: An Efficient and Versatile Membership Privacy Risk Metric for Machine Learning,0,
+2112.03570,2021-12-07,2022-04-12,Membership Inference Attacks From First Principles,0,
+2112.13547,2021-12-27,2022-03-13,PRIME: A few primitives can boost robustness to common corruptions,1,Code available at: https://github.com/amodas/PRIME-augmentations
+2202.01263,2022-02-02,2022-05-23,NoisyMix: Boosting Model Robustness to Common Corruptions,0,
+2202.01811,2022-02-03,2022-12-28,ObjectSeeker: Certifiably Robust Object Detection against Patch Hiding Attacks via Patch-agnostic Masking,0,IEEE Symposium on Security and Privacy 2023; extended version
+2202.04235,2022-02-09,2023-03-21,Towards Compositional Adversarial Robustness: Generalizing Adversarial Training to Composite Semantic Perturbations,0,CVPR 2023. The research demo is at https://hsiung.cc/CARBEN/
+2202.10103,2022-02-21,2022-06-16,Robustness and Accuracy Could Be Reconcilable by (Proper) Definition,1,ICML 2022
+2203.06616,2022-03-13,2022-03-13,LAS-AT: Adversarial Training with Learnable Attack Strategy,1,
+2203.09509,2022-03-17,2022-07-14,ToxiGen: A Large-Scale Machine-Generated Dataset for Adversarial and Implicit Hate Speech Detection,1,Published as a long paper at ACL 2022. Code: https://github.com/microsoft/TOXIGEN
+2204.12143,2022-04-26,2022-08-19,Deeper Insights into the Robustness of ViTs towards Common Corruptions,0,
+2205.14497,2022-05-28,2022-05-28,BadDet: Backdoor Attacks on Object Detection,0,
+2206.09628,2022-06-20,2022-07-19,Diversified Adversarial Attacks based on Conjugate Gradient Method,0,Proceedings of the 39th International Conference on Machine Learning (ICML 2022)
+2209.07399,2022-09-15,2023-02-02,A Light Recipe to Train Robust Vision Transformers,1,"Camera-ready version for SaTML 2023, code available at https://github.com/dedeswim/vits-robustness-torch"
+2210.07540,2022-10-14,2022-10-14,When Adversarial Training Meets Vision Transformers: Recipes from Training to Architecture,1,
+2210.09852,2022-10-18,2022-10-18,Scaling Adversarial Training to Large Perturbation Bounds,0,ECCV 2022
+2210.15318,2022-10-27,2022-10-27,Efficient and Effective Augmentation Strategy for Adversarial Training,1,NeurIPS 2022
+2212.11005,2022-12-21,2022-12-21,Revisiting Residual Networks for Adversarial Robustness: An Architectural Perspective,1,
+2212.14315,2022-12-29,2022-12-29,"""Real Attackers Don't Compute Gradients"": Bridging the Gap Between Adversarial ML Research and Practice",0,
+2301.12554,2023-01-29,2024-07-22,Improving the Accuracy-Robustness Trade-Off of Classifiers via Adaptive Smoothing,1,
+2302.03015,2023-02-06,2023-04-15,Exploring and Exploiting Decision Boundary Dynamics for Adversarial Robustness,1,Published at International Conference on Learning Representations (ICLR) 2023
+2302.04638,2023-02-09,2023-06-01,Better Diffusion Models Further Improve Adversarial Training,1,ICML 2023
+2302.10149,2023-02-20,2024-05-06,Poisoning Web-Scale Training Datasets is Practical,0,
+2302.14301,2023-02-28,2023-02-28,A Comprehensive Study on Robustness of Image Classification Models: Benchmarking and Rethinking,0,International Journal of Computer Vision (IJCV) [under review]
+2303.01870,2023-03-03,2023-10-28,"Revisiting Adversarial Training for ImageNet: Architectures, Training and Generalization across Threat Models",0,Accepted at NeurIPS 2023
+2304.05370,2023-04-11,2024-04-26,Overload: Latency Attacks on Object Detection for Edge Devices,0,
+2305.13948,2023-05-23,2024-10-27,Decoupled Kullback-Leibler Divergence Loss,1,NeurIPS 2024
+2306.04874,2023-06-08,2023-06-08,Expanding Scope: Adapting English Adversarial Attacks to Chinese,0,11 pages; in ACL23 TrustNLP 2023: TrustNLP: Third Workshop on Trustworthy Natural Language Processing Colocated with the Annual Conference of the Association for Computational Linguistics (ACL 2023)
+2307.02483,2023-07-05,2023-07-05,Jailbroken: How Does LLM Safety Training Fail?,0,
+2307.15043,2023-07-27,2023-12-20,Universal and Transferable Adversarial Attacks on Aligned Language Models,1,Website: http://llm-attacks.org/
+2308.03825,2023-08-07,2024-05-15,"""Do Anything Now"": Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models",0,
+2308.06463,2023-08-12,2024-03-26,GPT-4 Is Too Smart To Be Safe: Stealthy Chat with LLMs via Cipher,1,"Accepted by ICLR 2024. 21 pages, 3 figures, 13 tables"
+2308.13387,2023-08-25,2023-09-04,Do-Not-Answer: A Dataset for Evaluating Safeguards in LLMs,0,"18 pages, 9 figures, 11 tables"
+2308.16258,2023-08-30,2023-09-01,Robust Principles: Architectural Design Principles for Adversarially Robust CNNs,1,Published at BMVC'23
+2309.10253,2023-09-19,2024-06-27,GPTFUZZER: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts,0,
+2310.16944,2023-10-25,2023-10-25,Zephyr: Direct Distillation of LM Alignment,1,
+2311.08268,2023-11-14,2024-04-07,A Wolf in Sheep's Clothing: Generalized Nested Jailbreak Prompts can Fool Large Language Models Easily,1,"Acccepted by NAACL 2024, 18 pages, 7 figures, 13 tables"
+2312.02119,2023-12-04,2024-10-31,Tree of Attacks: Jailbreaking Black-Box LLMs Automatically,1,Accepted for presentation at NeurIPS 2024. Code: https://github.com/RICommunity/TAP
+2312.04960,2023-12-08,2025-12-15,MIMIR: Masked Image Modeling for Mutual Information-based Adversarial Robustness,1,Accepted by NDSS 2026
+2401.06373,2024-01-12,2024-01-23,How Johnny Can Persuade LLMs to Jailbreak Them: Rethinking Persuasion to Challenge AI Safety by Humanizing LLMs,0,"14 pages of the main text, qualitative examples of jailbreaks may be harmful in nature"
+2401.15817,2024-01-29,2024-01-29,Transparency Attacks: How Imperceptible Image Layers Can Fool AI Perception,0,
+2402.02263,2024-02-03,2024-10-16,MixedNUTS: Training-Free Accuracy-Robustness Balance via Nonlinearly Mixed Classifiers,0,
+2402.04249,2024-02-06,2024-02-27,HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal,1,Website: https://www.harmbench.org
+2402.16717,2024-02-26,2024-02-26,CodeChameleon: Personalized Encryption Framework for Jailbreaking Large Language Models,0,
+2403.02817,2024-03-05,2025-01-30,Here Comes The AI Worm: Unleashing Zero-click Worms that Target GenAI-Powered Applications,0,Website: https://sites.google.com/view/compromptmized
+2403.12025,2024-03-18,2024-10-04,A Toolbox for Surfacing Health Equity Harms and Biases in Large Language Models,0,
+2404.01318,2024-03-28,2024-10-31,JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models,1,"The camera-ready version of JailbreakBench v1.0 (accepted at NeurIPS 2024 Datasets and Benchmarks Track): more attack artifacts, more test-time defenses, a more accurate jailbreak judge (Llama-3-70B with a custom prompt), a larger dataset of human preferences for selecting a jailbreak judge (300 exa"
+2404.09349,2024-04-14,2024-07-10,Adversarial Robustness Limits via Scaling-Law and Human-Alignment Studies,0,ICML 2024
+2404.15881,2024-04-24,2024-04-24,Steal Now and Attack Later: Evaluating Robustness of Object Detection against Black-box Adversarial Attacks,0,
+2406.05927,2024-06-09,2025-10-08,MeanSparse: Post-Training Robustness Enhancement Through Mean-Centered Feature Sparsification,1,
+2406.11717,2024-06-17,2024-10-30,Refusal in Language Models Is Mediated by a Single Direction,0,
+2406.14598,2024-06-20,2025-03-01,SORRY-Bench: Systematically Evaluating Large Language Model Safety Refusal,0,Paper accepted to ICLR 2025
+2406.15513,2024-06-20,2025-06-14,PKU-SafeRLHF: Towards Multi-Level Safety Alignment for LLMs with Human Preference,0,"Accepted by ACL2025 Main, a sibling project to SafeRLHF and BeaverTails"
+2406.18682,2024-06-26,2024-07-08,The Multilingual Alignment Prism: Aligning Global and Local Preferences to Reduce Harm,0,
+2407.11969,2024-07-16,2025-04-17,Does Refusal Training in LLMs Generalize to the Past Tense?,1,"Accepted at ICLR 2025. Updates in v2 and v3: added GPT-4o, Claude 3.5 Sonnet, o1-mini, and o1-preview results. Code and jailbreak artifacts: https://github.com/tml-epfl/llm-past-tense"
+2408.03972,2024-08-07,2024-08-07,Enhancing Output Diversity Improves Conjugate Gradient-based Adversarial Attacks,1,ICPRAI2024
+2409.11445,2024-09-17,2024-11-05,Jailbreaking Large Language Models with Symbolic Mathematics,0,
+2409.20139,2024-09-30,2024-09-30,Characterizing Model Robustness via Natural Input Gradients,0,28 pages; 14 figures; 9 tables; to be published in ECCV 2024
+2410.02828,2024-10-01,2024-10-01,PyRIT: A Framework for Security Risk Identification and Red Teaming in Generative AI System,0,
+2501.01151,2025-01-02,2026-02-05,Characteristic oscillations in frequency-resolved heat dissipation of linear time-delayed Langevin systems: Approach fro,0,"13 pages, 2 figures"
+2503.13081,2025-03-17,2025-03-17,A Framework to Assess Multilingual Vulnerabilities of LLMs,0,
+2505.21605,2025-05-27,2026-04-05,SoSBench: Benchmarking Safety Alignment on Six Scientific Domains,0,Project Page: https://sosbench.github.io/; ICLR 2026
