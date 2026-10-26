@@ -17,7 +17,7 @@ class ArtifactConfig:
     selection_criteria: str = ""
     description: str = ""
     github_stars: Optional[int] = None
-    git_search_mode: str = "file"  # "file" or "string"
+    git_search_mode: str = "history"  # "history", "file" or "string"
 
 
 @dataclass
@@ -37,7 +37,7 @@ class TracerConfig:
 def _repo_dir_from_url(url: str) -> str:
     """Derive a local directory name from a GitHub URL."""
     path = urlparse(url).path.strip("/")
-    # "org/repo-name" or "org/repo-name.git" → "repo-name"
+    # "org/repo-name" or "org/repo-name.git" -> "repo-name"
     repo_name = path.split("/")[-1]
     if repo_name.endswith(".git"):
         repo_name = repo_name[:-4]
@@ -87,7 +87,7 @@ def load_config(config_path: str | Path, repos_relative_to_cwd: bool = False) ->
             selection_criteria=entry.get("selection_criteria", ""),
             description=entry.get("description", ""),
             github_stars=entry.get("github_stars"),
-            git_search_mode=entry.get("git_search_mode", "file"),
+            git_search_mode=entry.get("git_search_mode", "history"),
         ))
 
     selection = raw.get("selection", {})

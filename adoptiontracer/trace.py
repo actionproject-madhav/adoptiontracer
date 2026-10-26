@@ -1,13 +1,14 @@
-"""
-Git archaeology for adoption timestamps.
+"""Date the first integration of each paper in each artifact.
 
-For each paper referenced by an artifact, find the earliest Git commit
-that introduced the reference. Supports two modes:
+Three modes are available per artifact (``git_search_mode``):
 
-- file mode: uses `git log -S <id> -- <file>` scoped to specific files
-  (fast, works for repos where each paper has a distinct file/entry)
-- string mode: uses `git log -S` across the whole repo
-  (slower but accurate for repos with aggregated files like MITRE ATLAS)
+- ``history`` (default): stream the full history once and take the earliest
+  commit on any branch whose added lines introduce the identifier, by author
+  date. This is the method used in the paper.
+- ``file``: ``git log -S <id> -- <file>`` for each file that references the
+  paper at HEAD, with a repo-wide ``-S`` fallback.
+- ``string``: repo-wide ``git log -S <id>`` only, for repositories that keep
+  all references in a few aggregated files.
 """
 
 import logging
@@ -17,7 +18,8 @@ from datetime import datetime
 from pathlib import Path
 
 from .config import ArtifactConfig, TracerConfig
-from .extract import ExtractionResult, PaperReference
+from .extract import ExtractionResult, PaperReference, _compile_patterns
+from .history import scan_history
 
 logger = logging.getLogger(__name__)
 
@@ -149,44 +151,55 @@ def _trace_artifact(
     return None
 
 
+def _trace_history(
+    artifact: ArtifactConfig,
+    repo_path: Path,
+    wanted: set[str],
+    patterns: list,
+) -> list[AdoptionEvent]:
+    """One pass over the full history; earliest author-dated introduction per paper."""
+    first: dict[str, tuple[str, str]] = {}
+    for ev in scan_history(repo_path, patterns):
+        if ev.arxiv_id not in wanted:
+            continue
+        date = ev.author_date[:10]
+        if ev.arxiv_id not in first or date < first[ev.arxiv_id][0]:
+            first[ev.arxiv_id] = (date, ev.file)
+    return [
+        AdoptionEvent(aid, artifact.name, artifact.type, date, file)
+        for aid, (date, file) in first.items()
+    ]
+
+
 def trace(
     config: TracerConfig,
     extraction: ExtractionResult,
 ) -> TraceResult:
-    """
-    Trace adoption timestamps for all extracted paper references.
-
-    For each (paper, artifact) pair, runs Git archaeology to find
-    the earliest commit date when the reference was introduced.
-    """
-    artifact_map = {a.name: a for a in config.artifacts}
+    """Date every (paper, artifact) pair found by extraction."""
     result = TraceResult()
-    total = len(extraction.unique_ids)
+    patterns = _compile_patterns(config)
+    logger.info("Tracing first-integration dates for %d papers across %d artifacts",
+                len(extraction.unique_ids), len(config.artifacts))
 
-    logger.info("Tracing adoption dates for %d papers across %d artifacts...",
-                total, len(config.artifacts))
-
-    for i, arxiv_id in enumerate(extraction.unique_ids):
-        if (i + 1) % 25 == 0 or i == 0:
-            logger.info("  Progress: %d/%d papers", i + 1, total)
-
-        refs_by_artifact: dict[str, list[PaperReference]] = {}
-        for ref in extraction.arxiv_to_refs[arxiv_id]:
-            refs_by_artifact.setdefault(ref.artifact_name, []).append(ref)
-
-        for artifact_name, refs in refs_by_artifact.items():
-            artifact = artifact_map.get(artifact_name)
-            if not artifact:
-                continue
-            repo_path = config.get_repo_path(artifact)
-            if not repo_path.exists():
-                continue
-
+    for artifact in config.artifacts:
+        repo_path = config.get_repo_path(artifact)
+        if not repo_path.exists():
+            continue
+        wanted = {aid for aid, names in extraction.arxiv_to_artifacts.items()
+                  if artifact.name in names}
+        if not wanted:
+            continue
+        if artifact.git_search_mode == "history":
+            logger.info("  %s: streaming history for %d papers", artifact.name, len(wanted))
+            result.events.extend(_trace_history(artifact, repo_path, wanted, patterns))
+            continue
+        for arxiv_id in sorted(wanted):
+            refs = [r for r in extraction.arxiv_to_refs[arxiv_id] if r.artifact_name == artifact.name]
             event = _trace_artifact(arxiv_id, artifact, repo_path, refs)
             if event:
                 result.events.append(event)
 
-    logger.info("Tracing complete: %d adoption events for %d papers",
+    logger.info("Tracing complete: %d integration events for %d papers",
                 len(result.events),
                 len({e.arxiv_id for e in result.events}))
     return result
